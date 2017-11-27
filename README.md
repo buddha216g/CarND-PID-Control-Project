@@ -1,5 +1,20 @@
 # CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
+
+## Rubric Discussion Points
+
+- *Describe the effect each of the P, I, D components had in your implementation.*
+
+The Proportional (P) component had the large effect on the car's behavior. Car would steer proportionately (Kd times CTE ) in the opposite direction of CTE.
+
+The Differential (C) component counteracts the P component's tendency to overshoot the center line. A properly tuned D parameter will cause the car not to oscillate wildly at the center.
+
+The Integral (I) component counteracts any systematic bias (like steering drift or misaligned wheels) which prevents the P-D controller from reaching the center line. I didnt find the need for this component. But in some cases car was swerving close to the edges during turns. I had to add a very small value of Ki to rectify this issue.
+
+
+- *Describe how the final hyperparameters were chosen.*
+
+First i started with just P controller and then added the D controller to rectify the oscillations. I than added the twiddle algorithm and printed the output at each step. When i found the car stabilized after about 5000 steps, i took those Kp,Ki,Kd values and used that as intial values for my PID controller. I started with 0.2,0.004 and 3.0 for Kp,Ki,Kd and ended up with about 0.135,0.0.000000001,3.05. I was able to get the car travel without the i component, however, inorder to not go close to the edges i added a very small value for Ki.
+
 
 ---
 
