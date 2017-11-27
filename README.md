@@ -6,7 +6,7 @@
 
 The Proportional (P) component had the large effect on the car's behavior. Car would steer proportionately (Kd times CTE ) in the opposite direction of CTE.
 
-The Differential (C) component counteracts the P component's tendency to overshoot the center line. A properly tuned D parameter will cause the car not to oscillate wildly at the center.
+The Differential (C) component counteracts the P component's tendency to overshoot the center line. Tuned D parameter so as not to cause the car to oscillate wildly at the center.
 
 The Integral (I) component counteracts any systematic bias (like steering drift or misaligned wheels) which prevents the P-D controller from reaching the center line. I didnt find the need for this component. But in some cases car was swerving close to the edges during turns. I had to add a very small value of Ki to rectify this issue.
 
