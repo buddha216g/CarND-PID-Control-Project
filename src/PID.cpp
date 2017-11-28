@@ -24,9 +24,8 @@ void PID::Init(double Kp, double Ki, double Kd) {
     p = {Kp,Ki,Kd};
     dp = {0.1*Kp,0.1*Ki,0.1*Kd};
     step = 1;
-    param_index = 2;  // this will go back to 0 after the first twiddle loop
+    param_index = 2;
     total_error = 0;
-    //best_err = std::numeric_limits<double>::max();
     increased_P = false;
     reduced_P = false;
 
