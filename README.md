@@ -13,7 +13,7 @@ The Integral (I) component counteracts any systematic bias (like steering drift 
 
 - *Describe how the final hyperparameters were chosen.*
 
-First i started with just P controller and then added the D controller to rectify the oscillations. I than added the twiddle algorithm and printed the output at each step. When i found the car stabilized after about 5000 steps, i took those Kp,Ki,Kd values and used that as intial values for my PID controller. I started with 0.2,0.004 and 3.0 for Kp,Ki,Kd and ended up with about 0.135,0.0.000000001,3.05. I was able to get the car travel without the i component, however, inorder to not go close to the edges i added a very small value for Ki.
+First i started with just P controller and then added the D controller to rectify the oscillations. I than added the twiddle algorithm and printed the output at each step. When i found the car stabilized after about 5000 steps, i took those Kp,Ki,Kd values and used that as intial values for my PID controller. I started with 0.2,0.004 and 3.0 for Kp,Ki,Kd and ended up with about 0.2, 0.000001, 3.55349. I was able to get the car travel without the i component, however, inorder to not go close to the edges i added a very small value for Ki.
 
 See video link
 
