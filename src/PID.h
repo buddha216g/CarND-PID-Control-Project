@@ -29,9 +29,8 @@ public:
     int step, param_index;
     double total_error, best_err;
     bool increased_P, reduced_P;
+    double best_error = 999.9;
     
-    
-    double best_error = 999.9;    
   /*
   * Constructor
   */
