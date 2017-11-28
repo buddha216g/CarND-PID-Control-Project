@@ -17,7 +17,7 @@ First i started with just P controller and then added the D controller to rectif
 
 See video link
 
-https://youtu.be/h0zOYt1expk
+https://youtu.be/EKyb8RibB8w
 
 https://github.com/buddha216g/CarND-PID-Control-Project/blob/master/PID%20Video.mov
 ---
